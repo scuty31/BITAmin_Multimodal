@@ -1,0 +1,6 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = gdrive://19fH9lGwXIzR_PcbCdfKDUlikjQ8O0CI3
+    gdrive_client_id = 427251726257-purr3htea4p1uurb0qacq1dv92p4dsur.apps.googleusercontent.com
+    jobs = 10
