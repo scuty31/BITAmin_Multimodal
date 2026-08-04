@@ -1,0 +1,37 @@
+data:
+  root: /data/scuty/bitamin/reencoded
+  index: reports/eda/index.csv
+  real_category: RealVideo-RealAudio
+sampling:
+  num_frames: 32
+  strategy: uniform
+  real_videos: 500
+  fake_per_method: 1000
+  methods:
+  - wav2lip
+  - unknown
+  - faceswap
+face:
+  detector: retinaface
+  det_threshold: 0.1
+  align: true
+  crop_scale: 1.5
+  save_size: 320
+  save_format: png
+  on_failure: reuse_previous_bbox
+reencode:
+  enabled: true
+  codec: libx264
+  crf: 23
+  reason: metadata shortcut AUC=0.7025 (위험)
+split:
+  by: identity
+  stratify:
+  - race
+  - gender
+  ratios:
+    train: 0.7
+    val: 0.15
+    test: 0.15
+  paired_real_fake: true
+  check_source_leak: true
