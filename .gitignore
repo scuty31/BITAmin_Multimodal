@@ -1,1 +1,13 @@
 /data
+
+# 외부 레포 (별도 클론)
+GenD/
+
+# 보고서 빌드 산출물
+reports/build/
+
+# 임시 파일
+reports/eda/tmp_*.txt
+**/.ipynb_checkpoints/
+__pycache__/
+*.pyc
