@@ -1,0 +1,7 @@
+variant,cap,total_videos,total_frames,expected_gb,real_fake_ratio,faceswap_shortfall
+unknown_included,500,1879,60128,3.01,0.36,0
+unknown_included,1000,2879,92128,4.61,0.21,0
+unknown_included,2000,4879,156128,7.81,0.11,0
+unknown_excluded,500,1379,44128,2.21,0.57,0
+unknown_excluded,1000,1879,60128,3.01,0.36,0
+unknown_excluded,2000,2879,92128,4.61,0.21,0

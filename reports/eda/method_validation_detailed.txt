@@ -1,0 +1,34 @@
+=== (a) multi-token vs pure faceswap ===
+multi_count (faceswap+wav2lip): 1763
+pure_faceswap_count (method faceswap w/o wav2lip token): 379
+faceswap_total: 2142
+
+cross-tab sample:
+multi_FakeVideo-FakeAudio: 1763
+pure_FakeVideo-RealAudio: 379
+
+=== (b) idless vs idfull in unknown ===
+idless stats:
+{'count': 351, 'min_len': 7, 'max_len': 13, 'unique_prefixes': 125, 'top_prefixes': [('00028', 28), ('00052', 15), ('00015', 13), ('00109', 13), ('00005', 12), ('00078', 10), ('00083', 10), ('00160', 9), ('00002', 7), ('00021', 7)]}
+idfull stats:
+{'count': 3964, 'min_len': 29, 'max_len': 29, 'unique_prefixes': 169, 'top_prefixes': [('00028', 259), ('00005', 210), ('00015', 182), ('00052', 155), ('00092', 126), ('00078', 113), ('00043', 99), ('00118', 96), ('00072', 93), ('00010', 82)]}
+
+=== identity coverage ===
+unknown identities: 500
+faceswap_AFVR identities: 378
+overlap identities: 378
+
+=== (c) combos top 30 ===
+('none', 'wav2lip', 'rtvc'): 9072
+('none', 'wav2lip', 'none'): 5015
+('unresolved', 'none', 'none'): 4315
+('faceswap', 'wav2lip', 'rtvc'): 1763
+('none', 'none', 'rtvc'): 500
+('none', 'none', 'none'): 500
+('faceswap', 'none', 'none'): 379
+FakeVideo-FakeAudio rows with audio_method != rtvc: 0
+
+=== sampling alternatives ===
+video_swap_counts: {'faceswap': 2142}
+Option1 balanced per-swap (min available): per_swap=2142
+Option2 proportional caps (min(v,2*real=1000)): {'faceswap': 1000}
